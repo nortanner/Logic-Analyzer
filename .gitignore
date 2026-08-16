@@ -1,0 +1,16 @@
+# Vivado Project Files (if using the Tcl workflow)
+*.xpr
+*.xpr.user
+
+# Vivado Generated Directories
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# Log and Checkpoint Files
+*.jou
+*.log
+*.str
+*.dcp
