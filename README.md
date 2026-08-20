@@ -1,6 +1,6 @@
 # Logic Analyzer
 
-FPGA-based logic analyzer implemented for the Basys 3 (Artix‑7) board. The design samples external signals (from Pmod headers), stores them in a circular buffer, triggers on configurable conditions (rising/falling/level), and streams captured samples over UART for host-side decoding.
+FPGA-based logic analyzer implemented for the Basys 3 (Artix‑7) board. The design samples external signals (from Pmod headers), stores them in a circular buffer, triggers on configurable conditions (rising/falling/level), and streams captured samples over UART to a host.
 
 ## Key features
 - 8‑bit sampled input (JA + JB Pmod pins)
@@ -24,6 +24,26 @@ FPGA-based logic analyzer implemented for the Basys 3 (Artix‑7) board. The des
   - constrs_1/ — board constraints (XDC) — pin mappings for Basys 3
 - logic_analyzer.py — Python host script to read serial output and decode captures
 - synthesized_schematic.pdf, implemented_schematic.pdf, elaborated_schematic.pdf — schematics from tool flow
+
+## Media
+This repository includes simulation screenshots and board/display output images in the `Media/` directory. Below are thumbnails/links to the most relevant images included with the project.
+
+- Sampler Testbench: ![Sampler Testbench](Media/Sampler%20Testbench.png)
+- Circular Buffer Testbench: ![Circular Buffer Testbench](Media/Circular%20Buffer%20Testbench.png)
+- Trigger Engine Testbench: ![Trigger Engine Testbench](Media/Trigger%20Engine%20Testbench.png)
+- Readout FSM Testbench: ![Readout FSM Testbench](Media/Readout%20FSM%20Testbench.png)
+- UART TX Testbench: ![UART TX Testbench](Media/UART%20TX%20Testbench.png)
+- Display Controller Testbench: ![Display Controller Testbench](Media/Display%20Controller%20Testbench.png)
+- LogicAnalyzerTop Testbench: ![LogicAnalyzerTop Testbench](Media/LogicAnalyzerTop%20Testbench.png)
+
+Display output examples (captured from the board/simulation):
+
+- Rising Edge CH0 Display Output: ![Rising Edge CH0](Media/Rising%20Edge%20CH0%20Display%20Output.png)
+- Falling Edge CH7 Display Output: ![Falling Edge CH7](Media/Falling%20Edge%20CH7%20Display%20Output.png)
+- High CH4 Display Output: ![High CH4](Media/High%20CH4%20Display%20Output.png)
+- Low CH2 Display Output: ![Low CH2](Media/Low%20CH2%20Display%20Output.png)
+
+> Tip: If images do not render on GitHub's web view, navigate directly to the `Media/` folder: https://github.com/nortanner/Logic-Analyzer/tree/main/Media
 
 ## How to build and program (short)
 1. Open Vivado and create or open a project for the Basys 3 board.
